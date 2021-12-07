@@ -1,0 +1,309 @@
+@import "color";
+
+.content {
+  padding: 100px 0;
+  @media screen and (max-width: 1199px) {
+    padding: 70px 0;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 40px 0;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 210px;
+    height: 45px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    background-color: $btn;
+    transition: .3s;
+    &:hover {
+      background-color: $btn-hover;
+    }
+    @media screen and (max-width: 767px) {
+      width: 140px;
+      height: 35px;
+      margin-bottom: 25px;
+      font-size: 1.2rem;
+    }
+  }
+
+  &__date {
+    position: relative;
+    margin-left: 70px;
+    font-weight: 500;
+    font-size: 2rem;
+    &:before {
+      content: '';
+      position: absolute;
+      background-image: url("../img/date.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 25px;
+      height: 25px;
+      top: 50%;
+      left: -40px;
+      transform: translate(0, -50%);
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 1.4rem;
+      margin-left: 30px;
+    }
+  }
+
+  &__text {
+    padding-top: 45px;
+    @media screen and (max-width: 1199px) {
+      padding-top: 35px;
+    }
+  }
+
+  &__title {
+    width: 595px;
+    font-size: 4.4rem;
+    font-weight: 700;
+    line-height: 60px;
+    color: $title-color;
+    @media screen and (max-width: 1199px) {
+      width: 100%;
+    }
+    @media screen and (max-width: 767px) {
+      text-align: center;
+      font-size: 2.6rem;
+      line-height: 35px;
+    }
+  }
+
+  &__list {
+    margin-top: 30px;
+    margin-bottom: 45px;
+    padding-left: 40px;
+    width: 550px;
+    @media screen and (max-width: 1199px) {
+      margin-top: 25px;
+      width: 265px;
+    }
+    @media screen and (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin: 15px 0;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 30px;
+    &:before {
+      content: '';
+      position: absolute;
+      background-image: url("../img/chec.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 25px;
+      height: 25px;
+      top: 0;
+      left: -40px;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 1.4rem;
+      line-height: 20px;
+      &:before {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  &__popup {
+    width: 330px;
+    height: 60px;
+    background-color: $title-color;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #FFFFFF;
+    transition: .3s;
+    &:hover {
+      background-color: $title-hover;
+    }
+    @media screen and (max-width: 1199px) {
+      width: 100%;
+    }
+  }
+
+  &__slider {
+    position: absolute;
+    top: 0;
+    left: calc(100% - 510px);
+    width: 510px;
+    height: 550px;
+    .swiper {
+      height: 100%;
+    }
+    @media screen and (max-width: 1199px) {
+      left: auto;
+      right: -20px;
+      top: auto;
+      bottom: 55px;
+      width: 380px;
+      height: 470px;
+    }
+    @media screen and (max-width: 767px) {
+      position: relative;
+      right: 0;
+      bottom: 0;
+      margin: 40px auto 0 auto;
+    }
+  }
+
+  .slider-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    height: 480px;
+    margin: 0 auto;
+    background-color: $slider-bg;
+    box-shadow: 0 40px 40px rgba(19, 37, 49, 0.1);
+    border-radius: 10px;
+    @media screen and (max-width: 1199px) {
+      right: 0;
+      width: 300px;
+      height: 395px;
+      box-shadow: 0 20px 40px rgba(19, 37, 49, 0.1);
+    }
+  }
+
+  .slider-image {
+    width: 360px;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 10px;
+    @media screen and (max-width: 1199px) {
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  .image-title {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 164px;
+    height: 35px;
+    left: 20px;
+    bottom: 150px;
+    background-color: rgba(198, 225, 252, .9);
+    opacity: 0.6;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    @media screen and (max-width: 1199px) {
+      bottom: 120px;
+    }
+    @media screen and (max-width: 767px) {
+      bottom: 110px;
+    }
+  }
+
+  .slider-title {
+    margin-top: 35px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    font-weight: 600;
+    font-size: 2rem;
+    @media screen and (max-width: 1199px) {
+      margin-top: 25px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .slider-subtitle {
+    margin-left: 30px;
+    font-size: 1.8rem;
+  }
+
+  .content-pagination {
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 90px;
+  }
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #B3CEFF;
+  }
+  .swiper-pagination-bullet-active {
+    background: #005CFF;
+  }
+
+  .content-button-prev,
+  .content-button-next {
+    position: absolute;
+    z-index: 20;
+    top: 175px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $title-color;
+    transition: .3s;
+    &:hover {
+      background-color: $title-hover;
+    }
+    @media screen and (max-width: 1199px) {
+      display: none;
+    }
+  }
+
+  .content-button-prev {
+    left: 0;
+    &:before {
+      content: '';
+      position: absolute;
+      background-image: url("../img/arrow.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 18px;
+      height: 15px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .content-button-next {
+    right: 0;
+    &:before {
+      content: '';
+      position: absolute;
+      background-image: url("../img/arrow.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 18px;
+      height: 15px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(180deg);
+    }
+  }
+
+}
