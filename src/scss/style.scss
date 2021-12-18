@@ -21,9 +21,8 @@ html.active {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
   overflow-x: hidden;
-  color: $text-color;
 }
 
 :root {
@@ -37,7 +36,6 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 
 a {
   text-decoration: none;
-  color: $text-color;
 }
 
 li {
@@ -64,14 +62,13 @@ button {
 .container {
   position: relative;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  @media screen and (max-width: 1199px){
-    max-width: 660px;
-  }
-  @media screen and (max-width: 425px) {
-    max-width: 320px;
-  }
+}
+
+
+@media screen and (max-width: 767px) {
+
 }
 

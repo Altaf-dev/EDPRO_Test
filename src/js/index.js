@@ -1,24 +1,30 @@
+const MARKER = document.querySelector('.item-marker')
+const ITEM = document.querySelectorAll('.menu-item')
 
+function indicator (e){
+    MARKER.style.left = e.offsetLeft+'px'
+    MARKER.style.width = e.offsetWidth+'px'
+}
 
-//Обьявил переменную всплывающего окна
-const POPUP = document.querySelector('.footer__popup')
-
-
-
-// Слушатель кликов
-window.addEventListener('click', (event) => {
-    let element = event.target
-
-    // Функция открывания окна по нажатию на кнопку
-    if (element.classList.contains('content__popup')) {
-        $(POPUP).fadeIn()
-    }
-    // Функция закрытия окна по нажатию на крестик или за пределами формы
-    if (element.classList.contains('popup__close') ||
-        (element.classList.contains('footer__popup'))) {
-        closeModal()
-    }
+ITEM.forEach(link =>{
+    link.addEventListener('mousemove', (e) => {
+        indicator(e.target)
+    })
 })
+// // Слушатель кликов
+// window.addEventListener('click', (event) => {
+//     let element = event.target
+//
+//     // Функция открывания окна по нажатию на кнопку
+//     if (element.classList.contains('menu-btn')) {
+//         BTN.classList.toggle('menu-active')
+//     }
+//     // Функция закрытия окна по нажатию на крестик или за пределами формы
+//     if (element.classList.contains('popup__close') ||
+//         (element.classList.contains('footer__popup'))) {
+//         closeModal()
+//     }
+// })
 
 //Вызов функции закрытия окна
 function closeModal() {
@@ -26,25 +32,6 @@ function closeModal() {
 }
 
 
-//Инициализация и настройка слайдера
-
-const swiper = new Swiper('.swiper', {
-    centeredSlides: true,
-    slidesPerView: 1,
-    speed: 500,
-    loop: true,
-    height: 515,
-    pagination: {
-        el: '.content-pagination',
-    },
-    navigation: {
-        nextEl: '.content-button-next',
-        prevEl: '.content-button-prev',
-    },
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
-});
 
 //Маска ввода телефона
 $(document).ready(function () {
